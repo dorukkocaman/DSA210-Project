@@ -29,11 +29,7 @@ This project aims to analyze the effects of different conditions (drinking coffe
 - Python libraries (`pandas`, `numpy`, `matplotlib`) will be used for data analysis.
 - Correlation analysis will be conducted to examine relationships, and results will be visualized.
 
-## GitHub Tasks
-- [ ] Create a project repository.
-- [ ] Plan the data collection process.
-- [ ] Collect and analyze the first dataset.
-- [ ] Share the results in a report.
+Thank you.
 
-This project will provide valuable insights into individual physiological responses and serve as a data analysis example that can be shared with the community.
+
 
