@@ -140,6 +140,20 @@ plt.show()
 *Figure: Visualization of playoff AST/TO ratio compared to Points and Win Percentage*
 
 
+## 📉 Observing Trends vs. Proving Correlation
+
+While analyzing the regular season and playoff data, visualizing Assist/Turnover Ratio, Points Per Game, and Win Percentage, I noticed that although there are **visible trends** in certain areas of the chart, we **cannot confidently claim a clear correlation** between these metrics.
+
+For example, some teams with a relatively high AST/TO ratio also scored well or won more games, but this was not consistent across all teams. In several cases, teams with low assist efficiency still had high win percentages or points per game, and vice versa.
+
+This inconsistency suggests that other factors are likely influencing overall performance in the playoffs. Elements such as **defensive metrics, rebounding, steals, blocks, and defensive ratings** can significantly affect win outcomes and scoring — sometimes overshadowing assist-based efficiency.
+
+
+
+---
+
+> This section aims to reflect the complexity of playoff basketball and why single-metric evaluations can be misleading without context.
+
 
 ---
 
