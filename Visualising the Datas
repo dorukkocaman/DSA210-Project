@@ -57,6 +57,7 @@ ax2.legend(lines, labels, loc='upper left')
 # Show the plot
 
 plt.show()
+![AST/TO Visualization](Figure_1.png)
 
 
 ```
