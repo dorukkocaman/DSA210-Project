@@ -2,6 +2,7 @@
 
 ## Starting Point
 
+I have used two datas named "nba_team_stats_00_to_23.csv" and "games.cs" to achieve the visualization process.
 After calculating the main statistics, I decided to create a visual representation to better understand the relationships between metrics.  
 Here is the code I used to visualize the data:
 
