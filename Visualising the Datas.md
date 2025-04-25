@@ -10,10 +10,10 @@ Here is the code I used to visualize the data:
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Load the dataset
+
 data = pd.read_csv('/Users/dorukkocaman/Desktop/archive/nba_team_stats_00_to_23.csv')
 
-# Group by Team and aggregate totals
+
 team_stats = data.groupby('Team').agg({
     'assists': 'sum',
     'turnovers': 'sum',
@@ -22,18 +22,18 @@ team_stats = data.groupby('Team').agg({
     'games_played': 'sum'
 }).reset_index()
 
-# Calculate key metrics
+
 team_stats['AST_TO_RATIO'] = team_stats['assists'] / team_stats['turnovers']
 team_stats['PTS_PER_GAME'] = team_stats['points'] / team_stats['games_played']
 team_stats['WIN_PERCENTAGE'] = team_stats['wins'] / team_stats['games_played']
 
-# Sort teams by Points Per Game
+
 team_stats = team_stats.sort_values(by='PTS_PER_GAME', ascending=False)
 
-# Create the plot
+
 fig, ax1 = plt.subplots(figsize=(16, 8))
 
-# Bar plot: Assist/Turnover Ratio
+
 ax1.bar(team_stats['Team'], team_stats['AST_TO_RATIO'], color='skyblue', label='Assist/Turnover Ratio')
 ax1.set_xlabel('Team')
 ax1.set_ylabel('Assist/Turnover Ratio', color='skyblue')
@@ -41,21 +41,21 @@ ax1.tick_params(axis='y', labelcolor='skyblue')
 ax1.set_xticks(range(len(team_stats)))
 ax1.set_xticklabels(team_stats['Team'], rotation=45, ha='right')
 
-# Line plots: Points per Game and Win Percentage
+
 ax2 = ax1.twinx()
 line1 = ax2.plot(team_stats['Team'], team_stats['PTS_PER_GAME'], color='orange', marker='o', label='Points Per Game')
 line2 = ax2.plot(team_stats['Team'], team_stats['WIN_PERCENTAGE'] * 100, color='green', marker='s', label='Win Percentage (%)')
 ax2.set_ylabel('Points/Game & Win %', color='gray')
 ax2.tick_params(axis='y', labelcolor='gray')
 
-# Title and Legend
+
 plt.title('AST/TO Ratio vs Points/Game & Win% by Team (2000-2023)')
 fig.tight_layout()
 lines = line1 + line2
 labels = [l.get_label() for l in lines]
 ax2.legend(lines, labels, loc='upper left')
 
-# Show the plot
+
 
 plt.show()
 
@@ -72,6 +72,68 @@ plt.show()
 
 After calculating the regular season statistics, I also analyzed the playoff statistics,  
 as I thought they could provide additional insight for my research.
+
+There are different types of data so I created a new code set to create best visiual
+
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# 1. Load the playoff dataset
+data = pd.read_csv('/Users/dorukkocaman/Desktop/archive/nba_team_stats_playoffs_00_to_21.csv')
+
+# 2. Group by team (toplamlar alınacak metrikler)
+team_stats = data.groupby('team').agg({
+    'assists': 'sum',
+    'turnovers': 'sum',
+    'wins': 'sum',
+    'games_played': 'sum',
+    'points': 'mean'  # DİKKAT! points zaten maç başına ortalama, o yüzden mean
+}).reset_index()
+
+# 3. Calculate metrics
+team_stats['AST_TO_RATIO'] = team_stats['assists'] / team_stats['turnovers']
+team_stats['PTS_PER_GAME'] = team_stats['points']  # zaten ortalama olduğu için tekrar bölme yok
+team_stats['WIN_PERCENTAGE'] = team_stats['wins'] / team_stats['games_played']
+
+# 4. Sırala (daha okunaklı grafik için)
+team_stats = team_stats.sort_values(by='PTS_PER_GAME', ascending=False)
+
+# 5. Görselleştirme
+fig, ax1 = plt.subplots(figsize=(16, 8))
+
+# Bar: AST/TO Ratio
+ax1.bar(team_stats['team'], team_stats['AST_TO_RATIO'], color='skyblue', label='Assist/Turnover Ratio')
+ax1.set_xlabel('Team')
+ax1.set_ylabel('Assist/Turnover Ratio', color='skyblue')
+ax1.tick_params(axis='y', labelcolor='skyblue')
+ax1.set_xticks(range(len(team_stats)))
+ax1.set_xticklabels(team_stats['team'], rotation=45, ha='right')
+
+# Line: Points per Game ve Win %
+ax2 = ax1.twinx()
+line1 = ax2.plot(team_stats['team'], team_stats['PTS_PER_GAME'], color='orange', marker='o', label='Points Per Game')
+line2 = ax2.plot(team_stats['team'], team_stats['WIN_PERCENTAGE'] * 100, color='green', marker='s', label='Win Percentage (%)')
+ax2.set_ylabel('Points/Game & Win %', color='gray')
+ax2.tick_params(axis='y', labelcolor='gray')
+
+# Başlık ve legend
+plt.title('Playoff AST/TO Ratio vs Points/Game & Win% by Team (2000–2021)')
+fig.tight_layout()
+lines = line1 + line2
+labels = [l.get_label() for l in lines]
+ax2.legend(lines, labels, loc='upper left')
+
+# Görseli kaydet
+plt.savefig('image2.png')
+
+# Grafiği göster
+plt.show()
+
+
+
+```
 
 ![Playoff Analysis](Figure_2.png)
 
