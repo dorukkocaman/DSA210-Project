@@ -65,5 +65,19 @@ plt.show()
 
 ![AST/TO Visualization](Figure_1.png)
 
+
+
+
+## 🔍 Playoff Analysis Extension
+
+After calculating the regular season statistics, I also analyzed the playoff statistics,  
+as I thought they could provide additional insight for my research.
+
+![Playoff Analysis](image2.png)
+
+*Figure: Visualization of playoff AST/TO ratio compared to Points and Win Percentage*
+
+
+
 ---
 
