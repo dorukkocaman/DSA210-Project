@@ -61,7 +61,7 @@ This project helped me understand how small metrics like assist/turnover ratios 
 
 ## Example Visualization
 
-![Assist/Turnover Ratio vs Points/Game & Win%](assist_turnover_vs_points_per_game.png)
+
 
 > Note: The graph shows the Assist/Turnover ratio as bars, while Points Per Game and Win Percentage are plotted as lines for each team, based on data from 2000 to 2023.
 
