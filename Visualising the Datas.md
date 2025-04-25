@@ -64,6 +64,7 @@ plt.show()
 ```
 
 ![AST/TO Visualization](Figure_1.png)
+*Figure: Visualization of regular season AST/TO ratio compared to Points and Win Percentage*
 
 
 
