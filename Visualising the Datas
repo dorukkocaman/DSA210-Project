@@ -55,7 +55,10 @@ labels = [l.get_label() for l in lines]
 ax2.legend(lines, labels, loc='upper left')
 
 # Show the plot
+plt.savefig('images/ast_to_plot.png')
 plt.show()
+
+
 ```
 
 ---
