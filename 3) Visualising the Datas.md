@@ -89,12 +89,12 @@ team_stats = data.groupby('team').agg({
     'turnovers': 'sum',
     'wins': 'sum',
     'games_played': 'sum',
-    'points': 'mean'  # DİKKAT! points zaten maç başına ortalama, o yüzden mean
+    'points': 'mean'
 }).reset_index()
 
 
 team_stats['AST_TO_RATIO'] = team_stats['assists'] / team_stats['turnovers']
-team_stats['PTS_PER_GAME'] = team_stats['points']  # zaten ortalama olduğu için tekrar bölme yok
+team_stats['PTS_PER_GAME'] = team_stats['points']  
 team_stats['WIN_PERCENTAGE'] = team_stats['wins'] / team_stats['games_played']
 
 
