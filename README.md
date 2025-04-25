@@ -1,30 +1,30 @@
-# Heart Rate and Blood Oxygen Level Analysis
+# NBA Assit / Turnover Ratio and Win Rates - Point Per Game
 
-## Hello my name is Doruk Kocaman. My main goal is to examine the effects of my daily routines in a regular college term on my blood oxygen level and heart rate. After some examination I aim to find some causations or correlation between my health aspects and my daily activities. 
+## Hello my name is Doruk Kocaman. My main goal is to examine assist / turnover ratio withh the win percentage of the team and points per game. 
 
 ## Source and Purpose
-This project aims to analyze the effects of different conditions (drinking coffee, studying, exercising, and normal resting state) on heart rate and blood oxygen levels. Data will be collected through individual measurements and analyzed accordingly.
+This project aims to analyze how assist / turnover ratio affects the teams success in some areas like win percentage and poins per game .
 
 
 
-### 1. Normal State → Stable Heart Rate and Oxygen Levels
-- **Source:** Resting state without physical or mental activity.
-- **Purpose:** The heart rate is expected to be at its lowest and most stable, while the blood oxygen level remains constant.
+### 1. Calculating the assist / turnover ratio
 
-### 2. Drinking Coffee → Increased Heart Rate
-- **Source:** Caffeine consumption.
-- **Purpose:** The stimulant effects of caffeine may cause a short-term increase in heart rate. The impact on oxygen levels will be analyzed.
+- **Purpose:** Examining total assists and turnoves of every team and create a ratio.
 
-### 3. Studying → Stress-Induced Changes
-- **Source:** Activities requiring concentration.
-- **Purpose:** It is expected that attention and stress may increase heart rate. The effect on oxygen levels will also be examined.
+### 2. Calculating the win percentage 
 
-### 4. Exercising → Increased Heart Rate and Oxygen Consumption
-- **Source:** Physical activities such as walking or using workout equipment.
-- **Purpose:** Physical activity naturally increases heart rate and oxygen consumption. The trend of these changes will be analyzed.
+- **Purpose:** Analysing the win percentage by dividing total wins over the total games played
+
+### 3. Calculating points per game
+
+- **Purpose:** Computing points per game by dividing the total points scored over total games played
+
+### 4. Visualising the datas
+
+- **Purpose:** Trying to show whether assist / turnover ratio directly affects win rate and points per game. If not which other stats can be causing that.
 
 ## Data Collection and Analysis
-- Data will be collected from **Apple Health**, recorded by **Apple Watch**.
+- Data will be collected from **NBA app and Kaggle **
 - Health data will be exported from Apple Health and used for analysis.
 - Python libraries (`pandas`, `numpy`, `matplotlib`) will be used for data analysis.
 - Correlation analysis will be conducted to examine relationships, and results will be visualized.
