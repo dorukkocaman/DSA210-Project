@@ -280,11 +280,6 @@ plt.show()
 ---
 
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
-
----
 
 ## Acknowledgments and referances 
 
@@ -294,4 +289,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ---
 
-*Last Updated: May 29, 2025*
+
