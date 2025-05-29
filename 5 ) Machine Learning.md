@@ -193,7 +193,7 @@ plt.show()
 
 ```
 
-![AST/TO vs PPG Scatter Plot](Figure_4.png)
+
 
 
 
