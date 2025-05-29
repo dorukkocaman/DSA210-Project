@@ -91,9 +91,7 @@ Model: y = β₀ + β₁X + ε
 #### ❌ Weak Performance Indicators
 | Metric | Value | Interpretation |
 |--------|-------|----------------|
-| **R² Score** | 0.08 | AST/TO explains only 8% of win variance |
-| **RMSE** | 0.142 | High prediction error |
-| **MAE** | 0.118 | Substantial absolute error |
+| **R² Score** | 0.08 | AST/TO explains only 8% of win variance ||
 | **Coefficient** | +0.089 | Weak positive relationship |
 | **P-value** | 0.023 | Marginally significant |
 
