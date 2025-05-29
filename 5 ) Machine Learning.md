@@ -77,8 +77,6 @@ Model: y = β₀ + β₁X + ε
 | Metric | Value | Interpretation |
 |--------|-------|----------------|
 | **R² Score** | 0.33 | AST/TO explains 33% of PPG variance |
-| **RMSE** | 3.2 points | Average prediction error |
-| **MAE** | 2.1 points | Median absolute error |
 | **Coefficient** | +2305.33 | Points increase per season per AST/TO unit |
 | **Intercept** | 4583.19 | Baseline points when AST/TO = 0 |
 | **P-value** | < 0.001 | Statistically significant |
