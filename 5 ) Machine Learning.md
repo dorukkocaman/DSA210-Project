@@ -193,7 +193,7 @@ plt.show()
 
 ```
 
-![AST/TO vs PPG Scatter Plot](Figure_3.png)
+![AST/TO vs PPG Scatter Plot](Figure_4.png)
 
 
 
@@ -249,7 +249,7 @@ plt.show()
 
 ```
 
-![AST/TO vs Win % and Heat Map](Figure_4.png)
+![AST/TO vs Win % and Heat Map](Figure_3.png)
 
 ## 🎯 Conclusions
 
