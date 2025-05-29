@@ -152,6 +152,8 @@ WIN_PCT         0.283      0.421      1.000
 ## 🚀 Python Codes for Showing Expectancy Line and Heat Maps
 # Code 1 ( Scatter Plot of Points Per Game )
 
+```python
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -174,7 +176,7 @@ y = df['points_per_game']
 model = LinearRegression()
 model.fit(X, y)
 
-# Tahmin için değerlerfuture_ratios = np.linspace(1.0, 2.5, 50).reshape(-1, 1)
+
 predicted_ppg = model.predict(future_ratios)
 
 
@@ -189,11 +191,15 @@ plt.grid(True)
 plt.tight_layout()
 plt.show()
 
-
+```
 
 
 
 # Code 2 ( Heat Map and Scatter Plot of Win %)
+
+```python
+
+
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -238,6 +244,7 @@ axes[1].set_title('Correlation Matrix')
 plt.tight_layout()
 plt.show()
 
+```
 
 ## 🎯 Conclusions
 
