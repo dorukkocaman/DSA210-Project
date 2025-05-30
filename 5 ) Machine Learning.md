@@ -215,12 +215,26 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 
+
+plt.rcParams.update({
+    'font.size': 12,
+    'axes.titlesize': 14,
+    'axes.labelsize': 12,
+    'xtick.labelsize': 10,
+    'ytick.labelsize': 10,
+    'legend.fontsize': 10
+})
+
+
 df = pd.read_csv('/Users/dorukkocaman/Desktop/Team_Average_Stats__Rounded_.csv')
 df.columns = df.columns.str.strip()
 
-df['PTS_PER_GAME'] = df['points'] / df['games']
+
+df['PTS_PER_GAME'] = df['points']
+
 
 corr = df[['AST_TO_RATIO', 'PTS_PER_GAME', 'WIN_PERCENTAGE']].corr()
+
 
 label_map = {
     'AST_TO_RATIO': 'AST/TO Ratio',
@@ -229,20 +243,23 @@ label_map = {
 }
 corr = corr.rename(index=label_map, columns=label_map)
 
-fig, axes = plt.subplots(1, 2, figsize=(15, 6))
-fig.suptitle('AST/TO Ratio – Performance Analysis', fontsize=16, fontweight='bold')
+
+fig, axes = plt.subplots(1, 2, figsize=(18, 8), dpi=150)
+fig.suptitle('AST/TO Ratio – Regular Season Performance Analysis (2000 - 2023)', fontsize=16, fontweight='bold')
 
 
-axes[0].scatter(df['AST_TO_RATIO'], df['WIN_PERCENTAGE'], alpha=0.7, s=60, color='orange')
+axes[0].scatter(df['AST_TO_RATIO'], df['WIN_PERCENTAGE'], alpha=0.7, s=60, color='orange', label='Real Values')
+z = np.polyfit(df['AST_TO_RATIO'], df['WIN_PERCENTAGE'], 1)
+p = np.poly1d(z)
+axes[0].plot(df['AST_TO_RATIO'], p(df['AST_TO_RATIO']), "r--", alpha=0.8, linewidth=2, label='Predicted Trend')
+
 axes[0].set_xlabel('AST/TO Ratio')
 axes[0].set_ylabel('Win Percentage')
 axes[0].set_title('AST/TO Ratio vs Win Percentage')
 axes[0].grid(True, alpha=0.3)
 
 
-z = np.polyfit(df['AST_TO_RATIO'], df['WIN_PERCENTAGE'], 1)
-p = np.poly1d(z)
-axes[0].plot(df['AST_TO_RATIO'], p(df['AST_TO_RATIO']), "r--", alpha=0.8, linewidth=2)
+axes[0].legend(loc='upper left', frameon=True)
 
 
 sns.heatmap(corr, annot=True, cmap='Reds', center=0, square=True,
@@ -251,7 +268,9 @@ axes[1].set_title('Correlation Matrix')
 
 
 plt.tight_layout()
+plt.savefig('playoff_analysis.png', dpi=300, bbox_inches='tight')
 plt.show()
+
 
 ```
 
