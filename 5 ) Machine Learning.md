@@ -156,7 +156,7 @@ WIN_PCT         0.283      0.421      1.000
 
 ## 🚀 Python Codes for Showing Expectancy Line and Heat Maps
 
-_I have used nearly the same codes expect taken data from different resoruces so to avoid cluster I will only use once_
+_I have used nearly the same codes expect taken data from different resoruces so to avoid cluster I will only write the code once_
 
 # Code 1 ( Scatter Plot of Points Per Game )
 
