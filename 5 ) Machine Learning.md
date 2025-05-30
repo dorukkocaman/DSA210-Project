@@ -155,6 +155,9 @@ WIN_PCT         0.283      0.421      1.000
 ---
 
 ## 🚀 Python Codes for Showing Expectancy Line and Heat Maps
+
+_I have used nearly the same codes expect taken data from different resoruces so to avoid cluster I will only use once_
+
 # Code 1 ( Scatter Plot of Points Per Game )
 
 ```python
@@ -166,8 +169,8 @@ from sklearn.linear_model import LinearRegression
 import numpy as np
 
 
-df = pd.read_csv('/Users/dorukkocaman/Desktop/Team_Average_Stats__Rounded_.csv')
-df.columns = df.columns.str.strip()  # Sütun adlarındaki boşlukları temizle
+df = pd.read_csv('/Users/dorukkocaman/Desktop/Team_Average_Stats__Rounded_.csv') #here we can change the file read and it will show the playoff chats
+df.columns = df.columns.str.strip()  
 
 
 
