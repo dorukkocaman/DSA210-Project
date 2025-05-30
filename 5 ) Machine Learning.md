@@ -169,13 +169,13 @@ from sklearn.linear_model import LinearRegression
 import numpy as np
 
 
-df = pd.read_csv('/Users/dorukkocaman/Desktop/Team_Average_Stats__Rounded_.csv') #here we can change the file read and it will show the playoff chats
+df = pd.read_csv('/Users/dorukkocaman/Desktop/Team_Average_Stats__Rounded_.csv') #here we can change the file read and it will show the playoffs charts
 df.columns = df.columns.str.strip()  
 
 
 
 df['ratio'] = df['assists'] / df['turnovers']
-df['points_per_game'] = df['points'] / df['games_played']  # buradaki 'games' sütun adı sende neyse onunla değiştir
+df['points_per_game'] = df['points'] / df['games_played']
 
 
 X = df[['ratio']]
