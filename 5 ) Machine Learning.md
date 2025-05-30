@@ -7,7 +7,11 @@ This project already investigated the relationship between **Assist/Turnover Rat
 - **Win Percentage** - Overall team success
 
 Using machine learning techniques on NBA regular season data from 2000-2023 and NBA playoff data from 2000-2021 , we aim to understand how ball movement efficiency translates to scoring and winning.
-To create this prediction and comparision we will use the average stat data set named "_Team_Average_Stats__Rounded__" acquired from our raw datas.
+To create this prediction and comparision trough the regular season we will use the average stat data set named "_Team_Average_Stats__Rounded__"
+acquired from our raw datas.
+
+To create this prediction and comparision trough the playoffs we will use the average stat data set named "Playoff_Team_Average_Stats"
+acquired from our raw datas.
 
 ---
 
